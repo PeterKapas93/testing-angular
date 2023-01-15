@@ -6,8 +6,8 @@ import {StoreModule} from "@ngrx/store"
 import {AddPostComponent} from "./add-post/add-post.component"
 import {EditPostComponent} from "./edit-post/edit-post.component"
 import {PostslistComponent} from "./postslist/posts-list.component"
-import {postsReducer} from "./postslist/state/posts.reducer"
-import {POST_STATE_NAME} from "./postslist/state/posts.selector"
+import {postsReducer} from "./state/posts.reducer"
+import {POST_STATE_NAME} from "./state/posts.selector"
 
 const routes: Routes = [
   {
