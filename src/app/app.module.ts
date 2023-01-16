@@ -28,7 +28,7 @@ import {LoadingSpinnerComponent} from './shared/components/loading-spinner/loadi
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([AuthEffects]),
     StoreModule.forRoot( /* {
        counter: counterReducer,
        myPosts: postsReducer

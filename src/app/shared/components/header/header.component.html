@@ -16,18 +16,24 @@
 				 id="navbarNavAltMarkup">
 			<div class="navbar-nav">
 				<ul>
-					<li><a class="nav-link active"
+					<li class="nav-item"><a class="nav-link active"
 							 aria-current="page"
 							 [routerLink]="['/']">Home</a></li>
-					<li><a class="nav-link"
+					<li class="nav-item"><a class="nav-link"
 							 [routerLink]="['/counter']">Counter</a></li>
-					<li><a class="nav-link"
+					<li class="nav-item"><a class="nav-link"
 							 [routerLink]="['/posts']">Posts</a></li>
-					<li *ngIf="!(isAuthenticated |async)"><a class="nav-link"
+					<li class="nav-item"
+							*ngIf="!(isAuthenticated |async)"><a class="nav-link"
 							 [routerLink]="['/auth']">Login</a></li>
-					<li *ngIf="!(isAuthenticated |async)"><a class="nav-link"
+					<li class="nav-item"
+							*ngIf="!(isAuthenticated |async)"><a class="nav-link"
 							 [routerLink]="['/auth/signup']">Signup</a></li>
-					<li *ngIf="(isAuthenticated |async)"><a class="nav-link">Logout</a></li>
+					<li class="nav-item"
+							*ngIf="(isAuthenticated |async)">
+						<a class="nav-link"
+							 (click)="onLogout($event)">Logout</a>
+					</li>
 				</ul>
 			</div>
 		</div>
